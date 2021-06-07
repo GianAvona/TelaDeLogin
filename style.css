@@ -1,0 +1,301 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poiret+One&display=swap");
+/* 
+<i class="fab fa-google-plus-g"></i> GOOGLE +
+<i class="fab fa-linkedin-in"></i> LINKEDIN 
+<i class="fab fa-facebook-f"></i> FACEBOOK
+
+<i class="far fa-user"></i> USER
+<i class="far fa-envelope"></i> E-MAIL
+<i class="fas fa-key"></i> SENHA
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  animation: inicio 3s;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--laranja-escuro),
+    var(--laranja-claro)
+  );
+}
+:root {
+  --laranja-escuro: #fe705f;
+  --laranja-claro: #efaba1;
+  --roxo-escuro: #7a618e;
+  --roxo-claro: #bfb6b5;
+  --base: #faf9f9;
+
+  --titulo: "Open Sans", sans-serif;
+  --texto: "Poiret One", cursive;
+}
+
+#container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+/* DEFINIÇÕES GERAIS DAS PÁGINAS */
+.first-page,
+.second-page {
+  width: 80%;
+  height: 50%;
+  border-radius: 10px;
+  background: var(--base);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  max-width: 780px;
+}
+/* PRIMEIRA PÁGINA DE LOGIN */
+.first-page {
+  /* display: none; */
+  box-shadow: 5px 5px 5px var(--roxo-escuro);
+  visibility: visible;
+}
+.second-page {
+  position: absolute;
+  visibility: hidden;
+  /* display: none; */
+  box-shadow: 5px 5px 5px var(--roxo-escuro);
+}
+
+.first-left,
+.second-left {
+  flex: 1 0 auto;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  background: var(--laranja-escuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.first-right,
+.second-right {
+  flex: 2 0 auto;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  background: var(--laranja-claro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second-right {
+  border-radius: 10px 0 0 10px;
+}
+.second-left {
+  border-radius: 0 10px 10px 0;
+}
+.first-right p {
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.list-social-media {
+  width: 100%;
+  justify-content: center;
+}
+.title {
+  font-family: var(--titulo);
+  color: var(--roxo-escuro);
+  font-size: 32px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+.first-left .title {
+  color: var(--base);
+  padding-bottom: 20px;
+}
+.first-left p {
+  line-height: 1;
+  padding-bottom: 5px;
+}
+
+.btn {
+  width: 60%;
+  margin: 0 auto;
+  padding: 8px 15px 8px 15px;
+  margin-top: 15px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-shadow: 5px 5px 5px var(--roxo-escuro);
+  border-radius: 10px;
+}
+.second-right {
+  order: 1;
+}
+.second-left {
+  order: 2;
+}
+.second-right h2 {
+  color: var(--base);
+}
+.first-left .btn,
+.second-left .btn {
+  background: linear-gradient(65deg, var(--roxo-escuro), var(--roxo-claro));
+  transition: 0.8s;
+}
+.first-left .btn:hover,
+.second-left .btn:hover {
+  background: linear-gradient(
+    15deg,
+    var(--laranja-escuro),
+    var(--laranja-claro)
+  );
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: none;
+}
+.first-right .btn,
+.second-right .btn {
+  background: linear-gradient(
+    65deg,
+    var(--laranja-escuro),
+    var(--laranja-claro)
+  );
+  transition: 0.8s;
+}
+.first-right .btn:hover,
+.second-right .btn:hover {
+  background: linear-gradient(15deg, var(--roxo-escuro), var(--roxo-claro));
+  transition: 0.8s;
+  box-shadow: none;
+  cursor: pointer;
+}
+p,
+.btn,
+input {
+  font-family: var(--texto);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.social-media {
+  display: flex;
+  /* background-color: var(--laranja-escuro); */
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.social-media a {
+  border: 1px solid var(--roxo-escuro);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: var(--roxo-escuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 5px; */
+}
+.first-page .social-media a:hover {
+  background: var(--laranja-escuro);
+  transition: 1s;
+}
+.second-page .social-media a:hover {
+  background: var(--laranja-claro);
+  transition: 1s;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 42px;
+}
+.form-input input {
+  border: none;
+  height: 100%;
+  width: 70%;
+  position: relative;
+  background: var(--roxo-claro);
+  padding-left: 5px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+}
+.form-input i {
+  border: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 8px;
+  /* padding-left: 10px; */
+  background: var(--roxo-claro);
+  height: 100%;
+}
+/* SEGUNDA PÁGINA DE LOGIN */
+
+.sign-in-js .first-page {
+  visibility: hidden;
+  animation: esconde 1s;
+}
+.sign-in-js .second-page {
+  visibility: visible;
+  animation: visivel 1s;
+}
+.sign-up-js .first-page {
+  visibility: visible;
+  animation: visivel 1s;
+}
+.sign-up-js .second-page {
+  visibility: hidden;
+  animation: esconde 1s;
+}
+
+@keyframes esconde {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes visivel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes inicio {
+  from {
+    opacity: 0;
+    left: -250px;
+    top: -50px;
+  }
+  to {
+    left: 0;
+    top: 0;
+    opacity: 1;
+  }
+}
